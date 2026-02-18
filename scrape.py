@@ -1,3 +1,4 @@
+import csv
 import json
 import requests
 from bs4 import BeautifulSoup
@@ -44,7 +45,6 @@ with open("books.json", "w", encoding="utf-8") as f:
 print("Data successfully written to books.json")
 
 with open("books.csv", "w") as f:
-    import csv
 
     writer = csv.DictWriter(f, fieldnames=["title", "price", "currency"])
     writer.writeheader()
